@@ -26,7 +26,7 @@ app.use('/update', routes);
 app.use('/create', routes);
 
 // check the port are working
-app.listen(PORT,function(){
+app.listen(PORT, function() {
     //if(err) throw err;
-    console.log('Ears on port: ',  PORT);
+    console.log('Ears on port: %s',  PORT);
 });
