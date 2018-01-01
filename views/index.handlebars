@@ -44,3 +44,22 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function(){
+       $(document).on('click',"#devoure",function(){
+           console.log(this.value);
+           var row = parseInt(this.value);
+           $.post("/devour_a_burger",{row},function(data,status){
+                console.log('successful devoure!' + data + status);
+            })
+       }) 
+    //add a burg 
+     $(document).on('click',"#add",function(){
+        var val =  $('#burgerName').val().trim();
+           console.log(val);
+           $.post("/add_a_burger",{val},function(data,status){
+                console.log('successful devoure!' + data + status);
+            })
+       }) 
+    });
+</script>
